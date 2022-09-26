@@ -15,3 +15,13 @@ Node* List::pop(){
     this->head = this->head->next;
     return tmp;
 }
+
+// An experimental function without use at the moment
+// void List::show(){
+//     Node* aux = this->head;
+//     while(aux){
+//         aux->show();
+//         aux = aux->next;
+//     }
+//     cout << "0";
+// }

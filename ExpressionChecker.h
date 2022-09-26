@@ -2,14 +2,17 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include "List.h"
 
 using namespace std;
 
-class Expression {
+class ExpressionChecker {
     private:
         
     public:
-        Expression();
+        ExpressionChecker();
         void splitString(string &str, char delimeter, vector <string> &expression);
+        bool checker(vector <string> expression, List* pila);
+        string calculation(vector <string> expression, List* pila);
 
 };
