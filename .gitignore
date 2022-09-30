@@ -1,2 +1,4 @@
 # Ignore all the files with extension .o
 *.o
+*.png
+*.py
