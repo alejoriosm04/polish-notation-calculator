@@ -23,12 +23,6 @@ void menu() {
     // Verification of expression and organized it
     ec1->splitString(equation, delimeter, expression);
 
-    // Print the content of the vector
-    // for(int i = 0; i < expression.size(); i++) {
-    //     cout << expression[i] << endl;
-    // }
-    // cout << expression[expression.size()-1] << endl;
-
     bool valid = ec1->checker(expression, pila);
 
     if (valid) {
@@ -71,93 +65,6 @@ int main(){
             break;
         }
     }
-
-    // while(true) {
-    //     cin.get();
-    //     cout << "------------------------------------------" << endl;
-    //     cout << "Welcome to the Polish Notation Calculator." << endl;
-    //     cout << "0. Exit program." << endl;
-    //     cout << "1. Start Polish Notation Calculator." << endl;
-    //     cout << "------------------------------------------" << endl;
-
-    //     int option;
-    //     cout << "Enter an option:" << endl;
-    //     cin >> option;
-
-    //     if (option == 0) {
-    //         break;
-    //     }
-
-    //     if (option == 1) {
-    //         // // Declaration variables
-    //         // string equation;
-    //         // const char delimeter = ' ';
-    //         // vector <string> expression;
-    //         // ExpressionChecker* ec1 = new ExpressionChecker();
-    //         // List* pila = new List();
-
-    //         // // Ask for data
-    //         // getline(cin, equation);
-
-    //         // // Verification of expression and organized it
-    //         // ec1->splitString(equation, delimeter, expression);
-
-    //         // // bool valid = ec1->checker(expression, pila);
-    //         // // if (valid) {
-    //         // //     string result = ec1->calculation(expression, pila);
-    //         // //     cout << result << endl;
-    //         // // } else {
-    //         // //     cout << "Process finished" << endl;
-    //         // // }
-
-    //         // cout << "fvf" << endl;
-    //         // menu();
-    //     }
-    // }
-    // menu();
-
-    // do {
-    //     cout << "------------------------------------------" << endl;
-    //     cout << "Welcome to the Polish Notation Calculator." << endl;
-    //     cout << "0. Exit program." << endl;
-    //     cout << "1. Start Polish Notation Calculator." << endl;
-    //     cout << "------------------------------------------" << endl;
-
-    //     int option;
-    //     cout << "Enter an option:" << endl;
-    //     cin >> option;
-
-    //     if (option == 0) {
-    //         break;
-    //     }
-
-    //     if (option == 1) {
-    //         // // Declaration variables
-    //         // string equation;
-    //         // const char delimeter = ' ';
-    //         // vector <string> expression;
-    //         // ExpressionChecker* ec1 = new ExpressionChecker();
-    //         // List* pila = new List();
-
-    //         // // Ask for data
-    //         // getline(cin, equation);
-
-    //         // // Verification of expression and organized it
-    //         // ec1->splitString(equation, delimeter, expression);
-
-    //         // // bool valid = ec1->checker(expression, pila);
-    //         // // if (valid) {
-    //         // //     string result = ec1->calculation(expression, pila);
-    //         // //     cout << result << endl;
-    //         // // } else {
-    //         // //     cout << "Process finished" << endl;
-    //         // // }
-
-    //         // cout << "fvf" << endl;
-    //         menu();
-    //     }
-    // } while (true);
-
     cout << "" << endl;
     cout << "-------------------------------------------------------------------------------------------" << endl;
     cout << "Exit. Program finished" << endl;
