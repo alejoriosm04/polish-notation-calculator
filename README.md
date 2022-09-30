@@ -43,17 +43,11 @@ This software is able to answer correctly to some wrong inputs of the user. Howe
 - At execution time, the program is friendly with the user, allowing the user to enter as many inputs they want without closing the calculator. In the same way, if the input is invalid or wrong, the program does not close or finish.
 
 ## Installing
-The project was compiled to be used on your local Operative System with an executable file. In [`Release`](), you will, find the respectives executable files.
+The project was compiled to be used on your local Operative System with an executable file. In [`Release`](https://github.com/alejoriosm04/polish-notation-calculator/releases), you will, find the respectives executable files.
 
-Also, you have the option of clone this files on your local enviroment and execute through console:
+Also, you have the option of clone this project on your local machine with:
 
-- If you are in UNIX - Debian Distros
-
-    some command here
-
-- If you are in Windows
-
-    some command here
+    git clone git@github.com:alejoriosm04/polish-notation-calculator.git
 
 ## Contribute
 
