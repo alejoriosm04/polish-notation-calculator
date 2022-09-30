@@ -10,7 +10,22 @@ using namespace std;
 ExpressionChecker::ExpressionChecker(){}
 
 void ExpressionChecker::splitString(string &str, char delimeter, vector <string> &expression) {
-    stringstream s(str);
+    string expNueva = "";
+    int i=0;
+    while(str[i]){
+        if(i == 0){
+            expNueva+=str[i];
+            i++;
+            continue;
+        }
+        if (str[i]!= ' '){
+            expNueva += " ";
+            expNueva+=str[i];
+        }
+        i++;
+    }
+    stringstream s(expNueva);
+    // stringstream s(str);
 
     string equation;
 
@@ -23,13 +38,85 @@ void ExpressionChecker::splitString(string &str, char delimeter, vector <string>
 
 bool ExpressionChecker::checker(vector <string> expression, List* pila) {
     try {
-        ExpressionChecker::calculation(expression, pila);
-        cout << "Valid expression" << endl;
+        ExpressionChecker::calculationChecker(expression, pila);
+        cout << "-------------------------------------------------------------------------------------------" << endl;
+        cout << "Valid expression." << endl;
+        cout << "-------------------------------------------------------------------------------------------" << endl;
         return true;
+    // } // Print the error message
+    // catch (const char* msg) {
+    //     cerr << msg << endl;
+    //     return false;
+    // }
+    // Catch any error
+    // } catch (const char* msg) {
+    //     cout << msg << endl;
+    //     return false;
     } catch (invalid_argument& e) {
-        cout << "Invalid expression" << endl;
-        return false;
+         cout << "-------------------------------------------------------------------------------------------" << endl;
+         cout << "We were unable to calculate the expression, please check the expression and try again." << endl;
+         cout << e.what() << endl;
+         cout << "-------------------------------------------------------------------------------------------" << endl;
+         return false;
     }
+}
+
+string ExpressionChecker::calculationChecker(vector <string> expression, List* pila) {
+    // If the expression is empty, return an error
+    if (expression.empty()) {
+        throw invalid_argument("The expression is empty.");
+    }
+    // If the expression starts with an operator, return an error
+    if (expression[0] == "+" || expression[0] == "-" || expression[0] == "*" || expression[0] == "/") {
+        throw invalid_argument("The expression starts with an operator or probably your input is in sufix notation.");
+    }
+    // If the expression has equal or more operators than numbers, return an error
+    int operators = 0;
+    int numbers = 0;
+    for (int i = 0; i < expression.size(); i++) {
+        if (expression[i] == "+" || expression[i] == "-" || expression[i] == "*" || expression[i] == "/") {
+            operators++;
+        } else {
+            numbers++;
+        }
+    }
+    if (operators >= numbers) {
+        throw invalid_argument("The expression has equal or more operators than numbers.");
+    }
+    for(int i = 0; i < expression.size(); i++) {
+        if (expression[i].compare("+") == 0 || expression[i].compare("-") == 0 || expression[i].compare("*") == 0 || expression[i].compare("/") == 0) {
+        // */
+            // cout << expression[i] << endl;
+
+            float number1 = stof(pila->pop()->data);
+
+            float number2 = stof(pila->pop()->data);
+
+            float answer;
+
+            if (expression[i].compare("+") == 0) {
+                answer = number2 + number1;
+            } else if (expression[i].compare("-") == 0) {
+                answer = number2 - number1;
+            } else if (expression[i].compare("*") == 0) {
+                answer = number2 * number1;
+            } else if (expression[i].compare("/") == 0) {
+                answer = number2 / number1;
+            }
+            string answer_str = to_string(answer);
+            answer_str = answer_str.substr(0, answer_str.find(".")+3);
+            // cout << number2 << " " << expression[i] << " " << number1 << " = " << answer_str << endl; 
+            pila->append(new Node(answer_str, NULL));
+        } else {
+            // cout << expression[i] << endl;
+            float checker = stof(expression[i]);
+            pila->append( new Node(expression[i], NULL));
+            // float number1 = stof(expression[i]);
+            // cout << number1 + 1 << endl;
+        }
+    }
+    string result = pila->pop()->data;
+    return result;
 }
 
 string ExpressionChecker::calculation(vector <string> expression, List* pila) {
@@ -60,7 +147,7 @@ string ExpressionChecker::calculation(vector <string> expression, List* pila) {
         } else {
             // cout << expression[i] << endl;
             float checker = stof(expression[i]);
-            pila->append(new Node(expression[i], NULL));
+            pila->append( new Node(expression[i], NULL));
             // float number1 = stof(expression[i]);
             // cout << number1 + 1 << endl;
         }

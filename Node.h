@@ -12,6 +12,6 @@ class Node{
         string data;
         Node* next;
         Node(string data, Node* next);
-        // void show();
+        void show();
         
 };

@@ -17,11 +17,11 @@ Node* List::pop(){
 }
 
 // An experimental function without use at the moment
-// void List::show(){
-//     Node* aux = this->head;
-//     while(aux){
-//         aux->show();
-//         aux = aux->next;
-//     }
-//     cout << "0";
-// }
+void List::show(){
+    Node* aux = this->head;
+    while(aux){
+        aux->show();
+        aux = aux->next;
+    }
+    cout << "0";
+}

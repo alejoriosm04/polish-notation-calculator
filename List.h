@@ -15,6 +15,6 @@ class List{
         }
         void append(Node* data);
         Node* pop();
-        // void show();
+        void show();
 
 };

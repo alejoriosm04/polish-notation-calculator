@@ -10,6 +10,6 @@ Node::Node(string data, Node* next){
 }
 
 // An experimental function without use at the moment
-// void Node::show(){
-//     cout << "[" << this->data << "]->";
-// }
+void Node::show(){
+    cout << "[" << this->data << "]->";
+}

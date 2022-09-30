@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+title: Polish Notation Calculator
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Alejandro
+    family-names: Ríos Muñoz
+    affiliation: Universidad EAFIT
+repository-code: >-
+  https://github.com/alejoriosm04/polish-notation-calculator
+abstract: >-
+  A calculator that checks and reads multiple polish
+  notation expressions to make calculations. 
+keywords:
+  - C++
+  - Polish notation
