@@ -1,60 +1,88 @@
-<h1 align = "center">Polish Notation Calculator 🖩</h1>
+<h1 align = "center">Polish Notation Calculator</h1>
 
-A calculator that checks and reads multiple polish notation expressions to make calculations.
-
-For more details about [Polish Notation](https://en.wikipedia.org/wiki/Polish_notation).
-
+An implementation of a polish notation (PN)[^definition] calculator in C++ that does not rely on Standard Libraries.
 
 ## Features
 
-- 📥 The calculator receives the expression in Polish Notation and verifies it.
-- 🔍 Analyze the expressions through a Regular Expression process, taking into account the conditions that a Polish Notation Expression needs to work correctly.
-- 🤔 Calculate the Polish Notation Expression, giving all the operations involve and the final result.
-- 🔁 The program allows you to calculate as many times as you want without stopping the program.
+- 📥 Checks valid syntax of polish notation (PN) expressions
 
+- 🔍 Analyzes the expressions with a regex process
 
-## How does it work?
+- 🤔 Output result of PN expression and operational steps for solving it
 
-The main aim of the project is not to use any Standard Library of C++ related with Nodes and Linked Lists.
+- 🔁 Calculate endlessly (no need to execute the program each time)
 
-This program works with the Nodes and Linked Lists structures from zero, recreating all it is behavior.
+## Motivation
 
-First of all, the user enters an expression in Polish Notation that is checked by a simple Regular Expressions system. If the expression is not valid the program continues it is a normal process and asks again for a new expression. On the contrary, it asks the user if it wants to know the answer and the operations.
+The main aim of this project was to recreate the behavior of linked lists in C++ from scratch.
 
-It makes use of the Stack memory model for the operations with the linked lists. Where the last in the linked lists, is the first out of this. Also, apply concepts in pointers and references in C++ with an Object Oriented Programming Model.
+In other words, not using Standard Libraries of C++.
+
+## Method
+
+###  Flow
+
+1. The user inputs a polish notation (PN) expression.
+
+2. Then it is checked by a simple regular expressions system that:
+
+    - If invalid, asks for a new expression
+
+    - Otherwise, prompts the user: see result and operations?
+
+3. Finally, the user can input a new PN expression.
+
+### Technical details
+
+- Makes use of the **stack** memory model for the operations related to the linked lists. Where the last item in a linked list, is the first out of it (LIFO).
+
+- Applies concepts such as pointers and references in C++.
+
+- Modeled towards object-oriented programming.
 
 ## Documentation
 
-Please read carefully the instructions and recommendations of use that appears at the beginning of the program.
+**Note:** Please read the instructions and suggestions displayed at the start.
 
-This software is able to answer correctly to some wrong inputs of the user. However, in future updates, we will try to optimize all the possible bugs of the calculator. Read [Contribute](#contribute)
+- **Evaluate and calculate** PN expressions:
 
-- Evaluate and calculate prefix Polish Notation Expressions:
-    > `+ * 8 -72.4 4`
+    \+ * 8 -72.4 4
 
-    > `/ 8 + 6 * 3 2`
+    / 8 + 6 * 3 2
 
-    - **Operators**: addition (`+`), subtraction (`-`), multiplication
+- **Operators**: addition (`+`), subtraction (`-`), multiplication
     (`*`), division (`/`).
-    - **Decimal numbers** and **negative numbers** with dot as decimal separator.
 
-- Polish Notation Expressions have a specific way to be declared algebraically. Please read and investigate how are these expressions, in order to avoid possible errors in execution.
+- **Decimal numbers** (dot as decimal separator) and **negative numbers**.
 
-- At execution time, the program is friendly with the user, allowing the user to enter as many inputs they want without closing the calculator. In the same way, if the input is invalid or wrong, the program does not close or finish.
+### Caveats
 
-## Installing
-The project was compiled to be used on your local Operative System with an executable file. In [`Release`](https://github.com/alejoriosm04/polish-notation-calculator/releases), you will, find the respectives executable files.
+PN expressions have a certain way to be declared algebraically. Please be sure of the syntax to avoid errors in execution.
 
-Also, you have the option of clone this project on your local machine with:
+Be aware that it's possible for the program to answer correctly to some _wrong_ inputs. However, I plan to correct these kind of bugs in future updates.
 
-    git clone git@github.com:alejoriosm04/polish-notation-calculator.git
+As a precaution, the program does not break if the input is invalid.
+
+## Install
+
+- Binaries are in pre-release.
+
+<!-- Uncomment when binaries are released
+- The project was compiled to be run as an executable file. See [releases](https://github.com/alejoriosm04/polish-notation-calculator/releases).
+-->
+
+- Clone the repo:
+
+        git clone https://github.com/alejoriosm04/polish-notation-calculator.git
 
 ## Contribute
 
-There are many features and bugs that we have not added to the calculator. However, if you want to help us and contribute, make a pull request. These are just some of the many ways you can help to help this project to grow.
+You are welcome to submit issues or pull requests.
 
-## Developers
+## Authors
 
-This Polish Notation Calculator was developed by [Alejandro Ríos](https://github.com/alejoriosm04).
+[Alejandro Ríos](https://github.com/alejoriosm04) developed the entire program.[^thanks]
 
-Thanks to [Luis M. Torres-Villegas](https://github.com/LuisForPresident) contributing with the documentation of the project.
+[^definition]: Wikipedia: "A mathematical notation in which operators precede their operands".
+
+[^thanks]: Thanks to [Luis M. Torres-Villegas](https://github.com/LuisForPresident) for revising the README.
