@@ -83,6 +83,10 @@ You are welcome to submit issues or pull requests.
 
 [Alejandro Ríos](https://github.com/alejoriosm04) developed the entire program.[^thanks]
 
+## License
+
+Copyright © 2022 Alejandro Ríos.
+
 [^definition]: Wikipedia: "A mathematical notation in which operators precede their operands".
 
 [^thanks]: Thanks to [Luis M. Torres-Villegas](https://github.com/LuisForPresident) for revising the README.
