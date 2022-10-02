@@ -59,7 +59,7 @@ In other words, not using Standard Libraries of C++.
 
 PN expressions have a certain way to be declared algebraically. Please be sure of the syntax to avoid errors in execution.
 
-Be aware that it's possible for the program to answer correctly to some _wrong_ inputs. However, I plan to correct these kind of bugs in future updates. Also read [Contribute](#contribute).
+Be aware that it's possible for the program to answer correctly to some _wrong_ inputs. However, I plan to correct these kind of bugs in future updates. See [Contribute](#contribute).
 
 As a precaution, the program does not break if the input is invalid.
 
