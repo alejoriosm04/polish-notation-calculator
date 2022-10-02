@@ -87,6 +87,6 @@ You are welcome to submit issues or pull requests.
 
 Copyright © 2022 Alejandro Ríos.
 
-[^definition]: Wikipedia: "A mathematical notation in which operators precede their operands".
+[^definition]: [Wikipedia](https://en.wikipedia.org/wiki/Polish_notation): "A mathematical notation in which operators precede their operands".
 
 [^thanks]: Thanks to [Luis M. Torres-Villegas](https://github.com/LuisForPresident) for revising the README.
