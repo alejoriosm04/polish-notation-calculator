@@ -46,9 +46,9 @@ In other words, not using Standard Libraries of C++.
 
 - **Evaluate and calculate** PN expressions:
 
-    \+ * 8 -72.4 4
+    > \+ * 8 -72.4 4
 
-    / 8 + 6 * 3 2
+    > / 8 + 6 * 3 2
 
 - **Operators**: addition (`+`), subtraction (`-`), multiplication
     (`*`), division (`/`).
@@ -59,7 +59,7 @@ In other words, not using Standard Libraries of C++.
 
 PN expressions have a certain way to be declared algebraically. Please be sure of the syntax to avoid errors in execution.
 
-Be aware that it's possible for the program to answer correctly to some _wrong_ inputs. However, I plan to correct these kind of bugs in future updates.
+Be aware that it's possible for the program to answer correctly to some _wrong_ inputs. However, I plan to correct these kind of bugs in future updates. Also read [Contribute](#contribute).
 
 As a precaution, the program does not break if the input is invalid.
 
