@@ -85,7 +85,7 @@ You are welcome to submit issues or pull requests.
 
 ## License
 
-Copyright © 2022 Alejandro Ríos.
+Copyright 2022 Alejandro Ríos.
 
 [^definition]: [Wikipedia](https://en.wikipedia.org/wiki/Polish_notation): "A mathematical notation in which operators precede their operands".
 
